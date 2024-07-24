@@ -1,0 +1,18 @@
+﻿@model SchoolDbWeb.Models.ClassStream
+
+@{
+    ViewData["Title"] = "Class Stream Details";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Class Stream</h4>
+    <dl class="dl-horizontal">
+        <dt>ClassStreamId</dt>
+        <dd>@Model.ClassStreamId</dd>
+
+        <dt>ClassName</dt>
+        <dd>@Model.ClassName</dd>
+    </dl>
+</div>

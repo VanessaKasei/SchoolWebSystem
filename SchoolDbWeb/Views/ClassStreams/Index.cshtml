@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SchoolDbWeb.Models.ClassStream>
+
+@{
+    ViewData["Title"] = "Class Streams";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ClassStreamId</th>
+            <th>ClassName</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ClassStreamId</td>
+                <td>@item.ClassName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.ClassStreamId" class="btn btn-info">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
